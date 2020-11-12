@@ -24,3 +24,15 @@ yarn-error.log*
 
 # custom
 /data
+api/data
+
+# data
+*.pth
+*.h5
+*.csv
+*.whl
+
+
+#pyc
+*.pyc
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -10,7 +11,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        SBA-Team#1
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -21,12 +22,12 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
-    // marginTop: theme.spacing(8),
+    marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
 }));
 
-export default function Footer(props) {
+const Footer = (props) => {
   const classes = useStyles();
   const { description, title } = props;
 
@@ -39,7 +40,7 @@ export default function Footer(props) {
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           {description}
         </Typography>
-        <Copyright />
+        <Copyright/>
       </Container>
     </footer>
   );
@@ -49,3 +50,5 @@ Footer.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
 };
+
+export default Footer
